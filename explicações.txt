@@ -1,0 +1,74 @@
+algumas explicações extras, o mais importante está comentado nos arquivos
+pasta templates e arquivos como o urls.py do setup, models.py e views.py do todos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Git add no terminal para enviar os dados
+
+git add .
+
+depois fazer o git commit -m
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+depois isso dnv
+git commit -m "Commit e intalação do venv " 
+
+
+depois git push
+
+
+Get-ExecutionPolicy (para saber como está)
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass (para habilitar)
+
+./.venv/Scripts/activate (para ativar agr o .venv)
+
+-------------------------dentro do venv----------------------
+pip install django depois
+
+django-admin startproject setup .
+--------------------------------------------------------------------------------
+git checkout -b 01-django
+git branch
+
+Para atualizar usa
+Git add .
+Git commit -m ""
+git push depois
+
+
+python manage.py runserver
+
+no venv use python manage.py startapp nome_da_pasta
+
+vai na pasta settings.py em INSTALLED_APPS, coloque no final 'todos.apps.TodosConfig', ele faz ligação com a pasta todos, na area apps.py.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+PARA CADASTRAR A HTML TEM QUE CADASTRAR NA VIWES 
+
+
+
+ python manage.py migrate (serve para migrae para migrar do models e dados novos para o slite)
+
+ python manage.py makemigrations (refletiu a migração que foi criada)
+
+
+
+
+ csrf_token e um token que bloqueia requiçõies fora do meu sistema

@@ -1,0 +1,12 @@
+{% block content %} <!-- Essa função serve para armazenar os dados em bloco, faz com que o django reconheça melhor as funções-->
+
+    <h1>Lista de Usuarios</h1>
+        <ul>
+        {% for user in user_list %} <!-- Função do for, funciona da seguinte forma, for user(e o nome da classe q vc criou no models.py com a letra minuscula), in user_list(user_list é o nome que vc deu no arquivo urls.py para o UserListView) -->
+            <li> Nome - {{ user.nome }} | Idade - {{ user.idade }} - <a href="{% url 'user_update' user.id %}">Editar</a> | <a href="{% url 'user_confirm_delete' user.id %}">Deletar</a></li> <!--O modo de chamar o link é o padrão, o que muda nesse caso é que vc precisa refenciar o id do usuario, pois foi a forma que foi feito no urls.py (path('editar/<int:pk>/'), aqui o user.id, é a classe usada no models, lembrando q id é um inteiro, referenciando uma chave primária-->
+        {% endfor %} <!--Fim dafunção for, se n colar gera infinito-->
+        </ul>
+    <a href="{% url 'user_form' %}">Criar Novo Usuario</a>  <!-- lembrar de chamar com o a href, e não esquecer q é uma função de url, tento q está dentro com duas chaves e 2 porcentages "conteudo" -->
+</form>
+
+{% endblock %} <!-- Serve para finalizar o block content -->

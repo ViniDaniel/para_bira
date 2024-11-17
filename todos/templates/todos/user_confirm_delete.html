@@ -1,0 +1,10 @@
+{% block content %} <!-- Essa função serve para armazenar os dados em bloco, faz com que o django reconheça melhor as funções-->
+
+    <h1>Deseja apagar usuario?</h1> 
+    <form method="POST">  <!-- Lembrar de por o method="POST" para quele saiba onde encontar o formulário, não colocar form acrtion somente o form method -->
+        {% csrf_token %} <!-- obrigatorio por questões de seguraça do django, se não usar dará tela de erro -->
+        <button type="submit">Deletar</button>
+        <a href="{% url 'user_list' %}">Voltar</a> <!-- lembrar de chamar com o a href, e não esquecer q é uma função de url, tento q está dentro com duas chaves e 2 porcentages "conteudo" -->
+    </form>
+
+{% endblock %} <!-- Serve para finalizar o block content -->
